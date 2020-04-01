@@ -1,0 +1,27 @@
+{% extends './base.html' %}
+{% load static %}
+{% load materializecss %}
+
+{% block header_block %}
+<nav id='navbar'>
+</nav>
+{% endblock %}
+
+{% block main_block %}
+<div class="container">
+      <p class='flow-text'>🏠 Cadore a domicilio ⛰️ è una semplice pagina sempre in crescita.
+        La pagina è un progetto molto semplice, gratuito e creato nel mio tempo libero. <br>
+        Vuoi aggiungere la tua attività? Compila <a href="/create/">questo</a> form.<br>
+      <p class='flow-text'> Chi sono io ? <br>
+        Sono Andrea Barnabò , un ragazzo di Domegge con la passione per l'informatica.
+        Lavoro come sviluppatore software e insegnante di scuola superiore.
+</div>
+</main>
+{% endblock %}
+
+</body>
+{% block static_end %}
+{% load static %}
+<script href="src/components/navbarcomponent.js"></script>
+{% endblock %}
+</html>

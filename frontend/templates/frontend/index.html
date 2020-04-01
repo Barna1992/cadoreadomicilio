@@ -1,0 +1,33 @@
+{% extends './base.html' %}
+{% block header_block %}
+<nav id='navbar'>
+</nav>
+{% endblock %}
+
+{% block main_block %}
+<div class="container">
+      <h2>🏠 Cadore a domicilio ⛰️</h2>
+      <p class='flow-text'>Se sei arrivato qui, probabilmente stai cercando le attività in Cadore che
+        offrono un servizio di consegna a domicilio oppure che agevolano gli acquisti
+        permettendo di comprare la merce online e passare in negozio solamente a ritirarla. <br>
+        🏠 Cadore a domicilio ⛰️ È una semplice pagina che ha lo
+         scopo far conoscere agli abitanti dei nostri paesi le iniziative intraprese
+       dalle nostre attività locali in questo periodo di quarantena. <br>
+      A seguire trovate la lista dei locali finora censiti su questa pagina. <br><br><br>
+    ❗❗❗ Se sei un commerciante e vuoi che il tuo servizio di consegna a domicilio
+    o ritiro merce venga inserito in questo sito, per favore compila <a href="/create/">questo</a> form. <br><br><br>
+    💡💡💡 Se invece hai qualche consiglio o vuoi suggerirmi qualcosa altro da aggiungere
+    a questa pagina, per favore contattami a questa <a href="mailto: cadoreadomicilio@gmail.com">mail</a>.<br>
+    📩📩📩 Il sito è in continua evoluzione, se sei un commerciante e non trovi la tipologia di locale
+    in cui identificarti, scrivimi una <a href="mailto: cadoreadomicilio@gmail.com">mail</a> e verrà aggiunto.
+  </p>
+</div>
+<div id="app" class="container"></div>
+{% endblock %}
+
+</body>
+{% block static_end %}
+{% load static %}
+<script src="{% static "frontend/main.js" %}"></script>
+{% endblock %}
+</html>

@@ -1,0 +1,28 @@
+.row {
+  margin-bottom: 5px;
+}
+
+.hoverable:hover{
+  cursor: pointer;
+}
+
+h1, h5 {
+  color: #ee6e73;
+  text-decoration: underline;
+}
+
+i {
+  color: #ee6e73;
+}
+
+i.fa-times {
+  color: red;
+}
+
+i.fa-check {
+  color: green;
+}
+
+.brand-logo {
+  font-size: calc((.2em + 1vmin) + (.2em + 1vmax)) !important;
+}

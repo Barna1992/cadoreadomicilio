@@ -1,0 +1,41 @@
+{% extends './base.html' %}
+{% load static %}
+{% load materializecss %}
+
+{% block header_block %}
+<nav id='navbar'>
+</nav>
+{% endblock %}
+
+{% block main_block %}
+    <div class="row container">
+        <h1>Il mio locale:</h1>
+    </div>
+    <div class="row container">
+        <form method="POST" action="">
+            {% csrf_token %}
+            {% for field in form %}
+            <div class="input-field col s12">
+                    {{ field|materializecss }}
+            </div>
+            {% endfor %}
+            <button type="submit" class="save btn btn-primary">Salva</button>
+        </form>
+    </div>
+{% endblock %}
+
+<script>
+$(document).ready(function(){
+
+  // Initialize materialize data picker
+  $('.datepicker').datepicker({'format': 'yyyy-mm-dd'});
+  $('select').formSelect();
+
+});
+</script>
+</body>
+{% block static_end %}
+{% load static %}
+<script href="src/components/navbarcomponent.js"></script>
+{% endblock %}
+</html>

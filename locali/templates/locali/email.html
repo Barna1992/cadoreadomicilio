@@ -1,0 +1,21 @@
+{% load i18n %}
+<div>
+<h2>E' stato inserito un nuovo locale!!!</h2>
+<p>Nome del locale inserito: {{ cleaned_data.name }}</p>
+<p>Nel comune di {{ cleaned_data.comune }}</p>
+<p>Email: {{ cleaned_data.email }}</p>
+<p>Facebook: {{ cleaned_data.facebook }}</p>
+<p>Sito: {{ cleaned_data.sito }}</p>
+<p>Telefono: {{ cleaned_data.telefono }}</p>
+<p>Comue funziona: {{ cleaned_data.come_funziona }}</p>
+<p>Note: {{ cleaned_data.note }}</p>
+<p>Pranzo: {{ cleaned_data.pranzo }}</p>
+<p>Cena: {{ cleaned_data.cena }}</p>
+<p>Chiusura: {{ cleaned_data.chiusura }}</p>
+<p>Categoria: {{ cleaned_data.categoria }}</p>
+<p>Orario Mattina: {{ cleaned_data.orario_mattina }}</p>
+<p>Oraio Pomeridiano: {{ cleaned_data.orario_pomeriggio }}</p>
+{% for c in cleaned_data.consegno_a %}
+  <p>Consegno a: {{ c }}</p>
+{% endfor %}
+</div>
