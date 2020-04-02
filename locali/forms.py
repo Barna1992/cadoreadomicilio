@@ -15,8 +15,8 @@ class LocaleForm(forms.ModelForm):
         super().__init__(*args, **kwargs)
         self.fields['name'].label = "Nome del locale"
         self.fields['come_funziona'].label = "Modalità di consegna / ritiro"
-        self.fields['pranzo'].label = "Consegni a pranzo ?"
-        self.fields['cena'].label = "Consegni a cena ?"
+        self.fields['pranzo'].label = "Consegni a pranzo?"
+        self.fields['cena'].label = "Consegni a cena?"
 
     def clean(self):
         cleaned_data = super().clean()
