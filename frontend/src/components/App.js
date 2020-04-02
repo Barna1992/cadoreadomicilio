@@ -53,6 +53,4 @@ class App extends Component {
 
 export default App;
 
-if (window.location.pathname === '/') {
-  render(<App />, document.getElementById("app"));
-}
+render(<App />, document.getElementById("app"));
