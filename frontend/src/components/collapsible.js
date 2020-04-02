@@ -140,7 +140,7 @@ class Collapsible extends React.Component {
          <div className = "row hoverable">
            <div className='col s10 m10 valign-wrapper'><h6 className='center-align'><Emoji label={this.props.locale.categoria} symbol={emoji[this.props.locale.categoria]}/>   {this.props.locale.name}</h6></div>
           <div className='col s2 m2 valign-wrapper'><h6 className='center-align'>
-          {this.state.open ? ( <i class="fas fa-angle-up right"></i> ) : ( <i class="fas fa-angle-down right"></i> ) }
+          {this.state.open ? ( <i className="fas fa-angle-up right"></i> ) : ( <i className="fas fa-angle-down right"></i> ) }
           </h6></div>
         </div>
         </div>

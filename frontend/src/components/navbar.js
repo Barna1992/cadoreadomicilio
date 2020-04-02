@@ -5,7 +5,7 @@ import emoji from "./emoji_dict.js"
 
 const NavBar = props => (
   <div className="nav-wrapper">
-    <a href="#" className="brand-logo"><Emoji label='Casa' symbol={emoji['Casa']}/> Cadore a domicilio <Emoji label='Montagna' symbol={emoji['Montagna']}/></a>
+    <a href="/" className="brand-logo"><Emoji label='Casa' symbol={emoji['Casa']}/> Cadore a domicilio <Emoji label='Montagna' symbol={emoji['Montagna']}/></a>
     <ul id="nav-mobile" className="right">
       <li><a href="about.html">About</a></li>
     </ul>

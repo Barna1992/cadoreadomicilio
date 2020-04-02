@@ -37,7 +37,7 @@ class App extends Component {
 
   render() {
     return (
-      <ul class="collapsible">
+      <ul className="collapsible">
         {this.state.data.map(locale => {
           return (
             <li key={locale.id}>
@@ -53,4 +53,6 @@ class App extends Component {
 
 export default App;
 
-render(<App />, document.getElementById("app"));
+if (window.location.pathname === '/') {
+  render(<App />, document.getElementById("app"));
+}
