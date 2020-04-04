@@ -106,8 +106,17 @@ const CollapsibleBody = props => (
               <i className="fas fa-check"></i>
             ) : <i className="fas fa-times"></i>
         } </p>
+          </div>
         </div>
-      </div>
+        <div className='row'>
+          <div className='col'>
+          <p><strong> Consegna ai seguenti paesi </strong></p> {
+              props.locale.consegno_a.map(
+                (nome) => <p>{nome}</p>
+              )
+          }
+          </div>
+        </div>
         <div className='row'>
           <div className='col'>
         { props.locale.note ? (
