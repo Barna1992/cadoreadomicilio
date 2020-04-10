@@ -14,7 +14,8 @@ const emoji = {
     'Email':"📩",
     'Attenzione':"❗",
     'Articoli per animali':"🐶",
-    'Fioreria':"🌷"
+    'Fioreria':"🌷",
+    'Bar': "🍔"
 }
 
 export default emoji
