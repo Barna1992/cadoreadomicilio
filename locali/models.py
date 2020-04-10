@@ -14,6 +14,7 @@ GIORNI_SETTIMANA = [
 CATEGORIE = [
     ('AL', 'Alimentari'),
     ('AN', 'Articoli per animali'),
+    ('BA', 'Bar'),
     ('FI', 'Fioreria'),
     ('FV', 'Frutta e verdura'),
     ('GE', 'Gelateria'),
@@ -95,4 +96,4 @@ class Locale(models.Model):
         ordering = ['name']
 
     def __str__(self):
-        return '{} - {}'.format(self.name, self.get_comune_display())      
+        return '{} - {}'.format(self.name, self.get_comune_display())
