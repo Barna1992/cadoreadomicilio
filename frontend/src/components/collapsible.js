@@ -35,7 +35,7 @@ const CollapsibleBody = props => (
       <div className="col m3"><p>facebook <i className="fab fa-facebook blue-text darken-4" aria-hidden="true"></i></p></div>
       <div className="col m3">
       { props.locale.facebook ? (
-        <p><a href="{props.locale.facebook}">{props.locale.facebook}</a></p>
+        <p><a href={props.locale.facebook}>{props.locale.facebook}</a></p>
       ) :'' }
       </div>
       </div><div className="row">
@@ -49,7 +49,7 @@ const CollapsibleBody = props => (
       <div className="col m3"><p>sito <i className="fa fa-laptop grey-text darken-4" aria-hidden="true"></i></p></div>
       <div className="col m3">
       { props.locale.sito ?   (
-        <p><a href="{props.locale.sito}">{props.locale.sito}</a></p>
+        <p><a href={props.locale.sito}>{props.locale.sito}</a></p>
       ) :'' }
       </div>
       </div>
