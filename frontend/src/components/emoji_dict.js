@@ -16,7 +16,8 @@ const emoji = {
     'Articoli per animali':"🐶",
     'Fioreria':"🌷",
     'Bar': "🍔",
-    'Cambio Gomme' : "🔧"
+    'Cambio Gomme' : "🔧",
+    'Abbigliamento':"👗"
 }
 
 export default emoji

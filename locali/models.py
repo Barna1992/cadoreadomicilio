@@ -12,9 +12,11 @@ GIORNI_SETTIMANA = [
 
 
 CATEGORIE = [
+    ('AB', 'Abbigliamento'),
     ('AL', 'Alimentari'),
     ('AN', 'Articoli per animali'),
     ('BA', 'Bar'),
+    ('CA', 'Cambio Gomme'),
     ('FI', 'Fioreria'),
     ('FV', 'Frutta e verdura'),
     ('GE', 'Gelateria'),
