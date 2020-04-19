@@ -1,13 +1,14 @@
 from django.db import models
 
 GIORNI_SETTIMANA = [
+    ('AP', 'Sempre Aperto'),
     ('LU', 'Lunedi'),
     ('MA', 'Martedi'),
     ('ME', 'Mercoledi'),
     ('GI', 'Giovedi'),
     ('VE', 'Venerdi'),
     ('SA', 'Sabato'),
-    ('DO', 'Domenica'),
+    ('DO', 'Domenica')
 ]
 
 
@@ -17,7 +18,9 @@ CATEGORIE = [
     ('AN', 'Articoli per animali'),
     ('BA', 'Bar'),
     ('CA', 'Cambio Gomme'),
+    ('ED', 'Edicola'),
     ('FI', 'Fioreria'),
+    ('FE', 'Ferramenta e materiali edili'),
     ('FV', 'Frutta e verdura'),
     ('GE', 'Gelateria'),
     ('MA', 'Macelleria'),

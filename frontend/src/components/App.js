@@ -1,51 +1,30 @@
 import React, { Component } from "react";
 import { render } from "react-dom";
 import Emoji from "./emoji.js";
-import Collapsible from "./collapsible.js";
+import WholeCollapsible from "./collapsible.js";
+import SelectFilter from "./select.js";
 
-
-class App extends Component {
+class App extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      data: [],
-      loaded: false,
-      placeholder: "Loading"
+      selected: '0'
     };
+    this.handleChange = this.handleChange.bind(this);
   }
 
-  componentDidMount() {
-    fetch("api/locali")
-      .then(response => {
-        if (response.status > 400) {
-          return this.setState(() => {
-            return { placeholder: "Something went wrong!" };
-          });
-        }
-        return response.json();
-      })
-      .then(data => {
-        this.setState(() => {
-          return {
-            data,
-            loaded: true
-          };
-        });
-      });
-  }
-
+  handleChange(event) {
+    this.setState({
+      selected: event.target.value
+    });
+  };
 
   render() {
     return (
-      <ul className="collapsible">
-        {this.state.data.map(locale => {
-          return (
-            <li key={locale.id}>
-              <Collapsible locale={locale}/>
-            </li>
-          );
-        })}
-      </ul>
+      <div onChange={this.handleChange}>
+        <SelectFilter />
+        <WholeCollapsible filter={this.state.selected}/>
+      </div>
     );
   }
 

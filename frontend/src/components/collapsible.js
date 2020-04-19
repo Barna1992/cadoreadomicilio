@@ -160,4 +160,63 @@ class Collapsible extends React.Component {
       }
     }
 
-export default Collapsible;
+class WholeCollapsible extends React.Component {
+    constructor(props) {
+      super(props);
+      this.state = {
+        filter: props.filter,
+        data: [],
+        loaded: false,
+        placeholder: "Loading"
+      };
+    }
+
+    static getDerivedStateFromProps(nextProps, prevState){
+      if(nextProps.filter!==prevState.filter){
+         return { filter: nextProps.filter};
+      }
+      else return null;
+    }
+
+    componentDidMount() {
+      fetch("api/locali")
+        .then(response => {
+          if (response.status > 400) {
+            return this.setState(() => {
+              return { placeholder: "Something went wrong!" };
+            });
+          }
+          return response.json();
+        })
+        .then(data => {
+          this.setState(() => {
+            return {
+              data,
+              loaded: true
+            };
+          });
+        });
+    }
+
+    render() {
+      let locali = this.state.data;
+      if ( this.state.filter !== '0') {
+        let filter = this.state.filter;
+        locali = locali.filter( function (locale) {
+          return locale.consegno_a_id.includes(filter);
+        });
+      }
+      return(
+        <ul className="collapsible">
+          {locali.map(locale => {
+            return (
+              <li key={locale.id}>
+                <Collapsible locale={locale}/>
+              </li>
+            );
+          })}
+        </ul>
+      )
+    }
+}
+export default WholeCollapsible;

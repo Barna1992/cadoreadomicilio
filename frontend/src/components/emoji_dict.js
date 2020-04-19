@@ -17,7 +17,9 @@ const emoji = {
     'Fioreria':"🌷",
     'Bar': "🍔",
     'Cambio Gomme' : "🔧",
-    'Abbigliamento':"👗"
+    'Abbigliamento':"👗",
+    'Edicola':"📚",
+    'Ferramenta e materiali edili':"🔨"
 }
 
 export default emoji
