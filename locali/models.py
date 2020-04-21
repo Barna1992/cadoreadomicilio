@@ -37,6 +37,7 @@ COMUNI = [
 ('2', 'Borca di Cadore (BL)'),
 ('3', 'Calalzo di Cadore (BL)'),
 ('4', 'Cibiana di Cadore (BL)'),
+('20', 'Comelico Superiore (BL)'),
 ('5', 'Danta di Cadore (BL)'),
 ('6', 'Domegge di Cadore (BL)'),
 ('7', 'Lorenzago di Cadore (BL)'),
