@@ -7,5 +7,5 @@ class LocaleList(generics.ListCreateAPIView):
     serializer_class = LocaleSerializer
 
 class ComuniList(generics.ListCreateAPIView):
-    queryset = ComuneConsegna.objects.all()
+    queryset = sorted(ComuneConsegna.objects.all(), key= lambda t: t.get_comune_display())
     serializer_class = ComuneConsegnaSerializer

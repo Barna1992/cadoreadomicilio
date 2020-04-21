@@ -2,7 +2,7 @@ from django import forms
 from django.core.mail import EmailMessage
 from django.template.loader import render_to_string
 
-from .models import Locale
+from .models import Locale, ComuneConsegna
 from cadoreadomicilio import settings
 
 class LocaleForm(forms.ModelForm):
@@ -17,6 +17,8 @@ class LocaleForm(forms.ModelForm):
         self.fields['come_funziona'].label = "Modalità di consegna / ritiro"
         self.fields['pranzo'].label = "Consegni a pranzo?"
         self.fields['cena'].label = "Consegni a cena?"
+        comuni_consegna = sorted(ComuneConsegna.objects.all(), key= lambda t: t.get_comune_display())
+        self.fields['consegno_a'].choices = [( comune.id, comune.get_comune_display() ) for comune in comuni_consegna]
 
     def clean(self):
         cleaned_data = super().clean()
@@ -30,5 +32,5 @@ class LocaleForm(forms.ModelForm):
             email.content_subtype = "html"
             email.send()
         except:
-            pass    
+            pass
         return cleaned_data
