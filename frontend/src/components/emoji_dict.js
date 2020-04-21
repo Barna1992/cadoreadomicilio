@@ -18,8 +18,9 @@ const emoji = {
     'Bar': "🍔",
     'Cambio Gomme' : "🔧",
     'Abbigliamento':"👗",
-    'Edicola':"📚",
-    'Ferramenta e materiali edili':"🔨"
+    'Libreria':"📚",
+    'Ferramenta e materiali edili':"🔨",
+    'Edicola':"📰"
 }
 
 export default emoji

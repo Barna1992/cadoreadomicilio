@@ -23,6 +23,7 @@ CATEGORIE = [
     ('FE', 'Ferramenta e materiali edili'),
     ('FV', 'Frutta e verdura'),
     ('GE', 'Gelateria'),
+    ('LI', 'Libreria'),
     ('MA', 'Macelleria'),
     ('PA', 'Panificio'),
     ('PI', 'Pizzeria'),
