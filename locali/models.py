@@ -25,6 +25,7 @@ CATEGORIE = [
     ('GE', 'Gelateria'),
     ('LI', 'Libreria'),
     ('MA', 'Macelleria'),
+    ('OT', 'Ottica'),
     ('PA', 'Panificio'),
     ('PI', 'Pizzeria'),
     ('PS', 'Pasticceria'),

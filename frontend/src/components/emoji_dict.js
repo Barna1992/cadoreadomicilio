@@ -20,7 +20,8 @@ const emoji = {
     'Abbigliamento':"👗",
     'Libreria':"📚",
     'Ferramenta e materiali edili':"🔨",
-    'Edicola':"📰"
+    'Edicola':"📰",
+    'Ottica': "👓",
 }
 
 export default emoji
