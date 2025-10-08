@@ -1,4 +1,5 @@
 from django.db import models
+from django.core.validators import RegexValidator
 
 GIORNI_SETTIMANA = [
     ('AP', 'Sempre Aperto'),
@@ -56,6 +57,12 @@ COMUNI = [
 ('19', 'Zoppè di Cadore (BL)'),
 ]
 
+# Validatore per numeri di telefono italiani
+phone_validator = RegexValidator(
+    regex=r'^(\+39)?[\s]?[0-9]{2,4}[\s]?[0-9]{6,8}$',
+    message="Inserire un numero di telefono valido (es. 0435 123456 o +39 0435 123456)"
+)
+
 class ComuneConsegna(models.Model):
     COMUNI = COMUNI
     comune = models.CharField(
@@ -64,8 +71,8 @@ class ComuneConsegna(models.Model):
         default='1',
     )
 
-    def __str__(self):
-        return '{}'.format(self.get_comune_display())
+    def __str__(self) -> str:
+        return f'{self.get_comune_display()}'
 
 class Locale(models.Model):
     GIORNI_SETTIMANA = GIORNI_SETTIMANA
@@ -80,7 +87,13 @@ class Locale(models.Model):
     email = models.EmailField(blank=True, null=True)
     facebook = models.URLField(blank=True, null=True)
     sito = models.URLField(blank=True, null=True)
-    telefono = models.CharField(max_length=10, blank=True, null=True)
+    telefono = models.CharField(
+        max_length=20,
+        validators=[phone_validator],
+        blank=True,
+        null=True,
+        help_text="Formato: 0435 123456 o +39 0435 123456"
+    )
     come_funziona = models.CharField(max_length=2000, blank=True, null=True)
     note = models.CharField(max_length=300, blank=True, null=True)
     created_at = models.DateTimeField(auto_now_add=True)
@@ -103,5 +116,5 @@ class Locale(models.Model):
     class Meta:
         ordering = ['name']
 
-    def __str__(self):
-        return '{} - {}'.format(self.name, self.get_comune_display())
+    def __str__(self) -> str:
+        return f'{self.name} - {self.get_comune_display()}'
